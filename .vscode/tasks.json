@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Assemble day_01.asm",
+        "type": "shell",
+        "command": "nasm",
+        "args": [
+          "-f",
+          "elf32",
+          "day_01.asm",
+          "-o",
+          "day_01.o"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "Link day_01.o",
+        "type": "shell",
+        "command": "ld",
+        "args": [
+          "-m",
+          "elf_i386",
+          "day_01.o",
+          "-o",
+          "day_01"
+        ]
+      },
+      {
+        "label": "Run day_01",
+        "type": "shell",
+        "command": "./day_01",
+        "problemMatcher": []
+      }
+    ]
+  }
+  
