@@ -15,7 +15,7 @@
         "group": {
           "kind": "build",
           "isDefault": true
-          
+
         }
       },
       {
@@ -28,6 +28,7 @@
           "day_01.o",
           "-o",
           "day_01"
+          
         ]
       },
       {
